@@ -16,14 +16,15 @@ apply plugin: 'application'
 repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     compile group: 'io.vertx', name: 'vertx-core', version: "$vertxVersion"
     compile group: 'io.vertx', name: 'vertx-rx-java', version: "$vertxVersion"
-    compile group: 'io.vertx', name: 'vertx-web-client', version: '3.5.0'
+    compile group: 'io.vertx', name: 'vertx-web', version: "$vertxVersion"
+    compile group: 'io.vertx', name: 'vertx-web-client', version: "$vertxVersion"
 
     compile group: 'io.reactivex.rxjava2', name: 'rxjava', version: '2.1.8'
 
@@ -33,5 +34,5 @@ dependencies {
 }
 
 // Define the main class for the application
-mainClassName = 'HelloWorld'
+mainClassName = "com.canopy.interviewing.Start"
 

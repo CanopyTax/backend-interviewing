@@ -40,7 +40,7 @@ public class TopStoriesVerticle extends AbstractVerticle {
     }
 
     private void handleFetchStories(RoutingContext context) {
-        Start.fetchTopStoriesWithComments(client)
+        FetchStories.fetchTopStoriesWithComments(client)
                 .subscribe(data -> {
                     context.response().end(new JsonObject().put("topStories", data).toString());
                 }, error -> {
